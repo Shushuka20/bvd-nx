@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Message } from '@bvd-nx/api-interfaces';
 
 @Component({
   selector: 'bvd-nx-root',
@@ -8,6 +7,5 @@ import { Message } from '@bvd-nx/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
   constructor(private http: HttpClient) {}
 }
