@@ -1,0 +1,14 @@
+<h2>Вход в систему</h2>
+
+<form [formGroup]="loginForm">
+  <span class="p-float-label">
+    <input type="text" pInputText formControlName="username"> 
+    <label for="float-input">Username</label>
+  </span>
+  <span class="p-float-label">
+    <input type="password" pInputText formControlName="password" autocomplete="on"> 
+    <label for="float-input">Password</label>
+  </span>
+  <button pButton type="button" label="Войти" (click)='submitForm()'></button>
+</form>
+

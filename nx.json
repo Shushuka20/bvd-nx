@@ -36,6 +36,9 @@
     },
     "api": {
       "tags": []
+    },
+    "frontend-auth": {
+      "tags": []
     }
   }
 }

@@ -18,7 +18,12 @@
             "tsConfig": "apps/admin/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
-            "styles": ["apps/admin/src/styles.scss"],
+            "styles": [
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "apps/admin/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -166,6 +171,31 @@
           "options": {
             "jestConfig": "apps/api/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "frontend-auth": {
+      "projectType": "library",
+      "root": "libs/frontend/auth",
+      "sourceRoot": "libs/frontend/auth/src",
+      "prefix": "bvd-nx",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/auth"],
+          "options": {
+            "jestConfig": "libs/frontend/auth/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/auth/src/**/*.ts",
+              "libs/frontend/auth/src/**/*.html"
+            ]
           }
         }
       }
