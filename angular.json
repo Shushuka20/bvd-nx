@@ -71,6 +71,7 @@
           },
           "defaultConfiguration": "development",
           "options": {
+            "browserTarget": "latest-project:build",
             "proxyConfig": "apps/admin/proxy.conf.json"
           }
         },
